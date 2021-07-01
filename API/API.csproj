@@ -21,6 +21,9 @@
 
   <ItemGroup>
     <None Remove="datingapp.db-wal" />
+    <None Remove="datingapp.db-shm" />
+    <None Remove="datingapp.db-wal" />
+    <None Remove="datingapp.db-wal" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />

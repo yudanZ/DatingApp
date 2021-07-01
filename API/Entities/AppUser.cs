@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using API.Extensions;
+using API.Entities;
 
 namespace API.Entities
 {
@@ -35,10 +35,9 @@ namespace API.Entities
 
         public ICollection<Photo> Photos { get; set; }
 
-        //public int GetAge()
-        //{
-        //    return DateOfBirth.CalculateAge();
-        //}
+        public ICollection<UserLike> LikedByUsers { get; set; }
+
+        public ICollection<UserLike> LikedUsers { get; set; }
 
         
     }
