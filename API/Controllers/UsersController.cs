@@ -33,8 +33,8 @@ namespace API.Controllers
             _photoService = photoService;
         }
 
+       
         [HttpGet]
-        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
@@ -52,7 +52,7 @@ namespace API.Controllers
 
         
         // api/users/3
-
+        
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
