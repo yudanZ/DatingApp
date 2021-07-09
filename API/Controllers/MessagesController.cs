@@ -6,9 +6,11 @@ using API.Entities;
 using API.Extensions;
 using API.Helpers;
 using API.Interfaces;
+using API.SignalR;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace API.Controllers
 {
@@ -18,12 +20,14 @@ namespace API.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IMessageRepository _messageRepository;
         private readonly IMapper _mapper;
+        
 
         public MessagesController(IUserRepository userRepository, IMessageRepository messageRepository, IMapper mapper)
         {
             _userRepository = userRepository;
             _messageRepository = messageRepository;
             _mapper = mapper;
+            
         }
 
         [HttpPost]
